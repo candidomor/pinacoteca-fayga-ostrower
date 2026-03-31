@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Obra - Pinacoteca</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .obra-detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            margin-top: 80px;
+        }
+
+        .obra-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            object-fit: contain;
+            background: #f5f5f5;
+            padding: 2rem;
+            max-height: 80vh;
+        }
+
+        .obra-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .obra-meta {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .obra-meta b {
+            color: var(--primary-color);
+        }
+
+        .obra-section-title {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .obra-text {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .author-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+
+
+        @media (max-width: 900px) {
+            .obra-detail-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar" class="scrolled" aria-label="Navegação principal">
+        <a href="index.html" class="logo" style="text-decoration: none;">PINACOTECA</a>
+        <ul class="nav-links">
+            <li><a href="index.html" title="Início"><i class="fas fa-home"></i> <span class="nav-label">Início</span></a></li>
+            <li><a href="advanced-search.html" title="Pesquisa Avançada"><i class="fas fa-sliders"></i> <span class="nav-label">Pesquisa Avançada</span></a></li>
+            <li><a href="#" title="Acervo"><i class="fas fa-images"></i> <span class="nav-label">Acervo</span></a></li>
+            <li><a href="#" title="Sobre"><i class="fas fa-info-circle"></i> <span class="nav-label">Sobre</span></a></li>
+            <li><a href="#" style="border: 1px solid rgba(255,255,255,0.3); padding: 4px 10px; border-radius: 4px;" title="Login / Cadastro"><i class="fas fa-user-circle"></i> <span class="nav-label">Login / Cadastro</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="gallery-section" id="obra-main-container">
+        <!-- Content injected by JS -->
+        <div style="text-align: center; padding: 10rem 0;">Carregando detalhes...</div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">PINACOTECA</div>
+        <p>Acervo digital aberto ao público.</p>
+    </footer>
+
+    <!-- Accessibility Floating Button (panel injected by accessibility.js) -->
+    <div class="acc-trigger" role="button" aria-label="Menu de Acessibilidade" aria-expanded="false" tabindex="0">
+        <i class="fas fa-universal-access"></i>
+        <div class="acc-tooltip">Acessibilidade</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

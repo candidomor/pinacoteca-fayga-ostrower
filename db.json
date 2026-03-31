@@ -1,0 +1,1248 @@
+{
+    "obras": [
+        {
+            "id": "01.jpg",
+            "src": "Imagens/01.jpg",
+            "title": "Fissão",
+            "year": "1986",
+            "technique": "Gravura em Metal",
+            "tone": 38,
+            "tags": [
+                "geometria",
+                "linhas",
+                "movimento"
+            ],
+            "inv": "INV-2424",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Cildo Meireles",
+                "Anna Maria Maiolino",
+                "Djanira da Motta e Silva"
+            ],
+            "city": "Campinas"
+        },
+        {
+            "id": "02.jpg",
+            "src": "Imagens/02.jpg",
+            "title": "Raiz",
+            "year": "1982",
+            "technique": "Xilogravura",
+            "tone": 21,
+            "tags": [
+                "preto",
+                "espaço",
+                "movimento"
+            ],
+            "inv": "INV-1434",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Anna Maria Maiolino",
+                "Lasar Segall",
+                "Amilcar de Castro",
+                "Francisco Brennand"
+            ],
+            "city": "São José dos Campos"
+        },
+        {
+            "id": "03.jpg",
+            "src": "Imagens/03.jpg",
+            "title": "Quimera",
+            "year": "1944",
+            "technique": "Gravura em Metal",
+            "tone": 67,
+            "tags": [
+                "forma",
+                "branco",
+                "abstrato"
+            ],
+            "inv": "INV-3615",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Arthur Bispo do Rosário",
+                "Anita Malfatti",
+                "Tomie Ohtake",
+                "Lygia Pape"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "04.jpg",
+            "src": "Imagens/04.jpg",
+            "title": "Raiz",
+            "year": "1959",
+            "technique": "Gravura em Metal",
+            "tone": 37,
+            "tags": [
+                "contraste",
+                "linhas",
+                "forma"
+            ],
+            "inv": "INV-7224",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Lygia Clark",
+                "Carybé",
+                "Ivan Serpa",
+                "Cândido Portinari"
+            ],
+            "city": "Jundiaí"
+        },
+        {
+            "id": "05.jpg",
+            "src": "Imagens/05.jpg",
+            "title": "Reflexo",
+            "year": "1938",
+            "technique": "Aquarela",
+            "tone": 15,
+            "tags": [
+                "matriz",
+                "movimento",
+                "linhas"
+            ],
+            "inv": "INV-7201",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Francisco Brennand",
+                "Anna Bella Geiger",
+                "Lygia Clark",
+                "Alfredo Volpi",
+                "Anita Malfatti"
+            ],
+            "city": "Sorocaba"
+        },
+        {
+            "id": "06.jpg",
+            "src": "Imagens/06.jpg",
+            "title": "Rastro",
+            "year": "1951",
+            "technique": "Aquarela",
+            "tone": 83,
+            "tags": [
+                "preto",
+                "linhas",
+                "abstrato"
+            ],
+            "inv": "INV-4733",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Ivan Serpa",
+                "Tomie Ohtake",
+                "Arthur Bispo do Rosário",
+                "Wesley Duke Lee"
+            ],
+            "city": "São José dos Campos"
+        },
+        {
+            "id": "07.jpg",
+            "src": "Imagens/07.jpg",
+            "title": "Desvio",
+            "year": "1949",
+            "technique": "Xilogravura",
+            "tone": 58,
+            "tags": [
+                "branco",
+                "matriz",
+                "contraste"
+            ],
+            "inv": "INV-3664",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Anna Bella Geiger",
+                "Ivan Serpa",
+                "Rubem Valentim",
+                "Anita Malfatti",
+                "Tomie Ohtake"
+            ],
+            "city": "Piracicaba"
+        },
+        {
+            "id": "08.jpg",
+            "src": "Imagens/08.jpg",
+            "title": "Vibração",
+            "year": "1930",
+            "technique": "Aquarela",
+            "tone": 19,
+            "tags": [
+                "forma",
+                "geometria",
+                "movimento"
+            ],
+            "inv": "INV-5010",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Djanira da Motta e Silva",
+                "Carybé",
+                "Amilcar de Castro",
+                "Wesley Duke Lee",
+                "Antonio Dias"
+            ],
+            "city": "Santos"
+        },
+        {
+            "id": "09.jpg",
+            "src": "Imagens/09.jpg",
+            "title": "Névoa",
+            "year": "1980",
+            "technique": "Aquarela",
+            "tone": 81,
+            "tags": [
+                "preto",
+                "contraste",
+                "abstrato"
+            ],
+            "inv": "INV-4752",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Ivan Serpa",
+                "Tomie Ohtake",
+                "Rubem Valentim",
+                "Lygia Clark"
+            ],
+            "city": "Bauru"
+        },
+        {
+            "id": "10.jpg",
+            "src": "Imagens/10.jpg",
+            "title": "Fragmento",
+            "year": "1949",
+            "technique": "Aquarela",
+            "tone": 18,
+            "tags": [
+                "preto",
+                "forma",
+                "contraste"
+            ],
+            "inv": "INV-4483",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Arthur Bispo do Rosário",
+                "Cildo Meireles",
+                "Cândido Portinari",
+                "Carlos Scliar",
+                "Alfredo Volpi"
+            ],
+            "city": "Sorocaba"
+        },
+        {
+            "id": "11.jpg",
+            "src": "Imagens/11.jpg",
+            "title": "Ritmo",
+            "year": "1964",
+            "technique": "Gravura em Metal",
+            "tone": 43,
+            "tags": [
+                "geometria",
+                "preto",
+                "movimento"
+            ],
+            "inv": "INV-9830",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Antonio Dias",
+                "Carybé",
+                "Anna Maria Maiolino",
+                "Manabu Mabe",
+                "Rubem Valentim"
+            ],
+            "city": "Piracicaba"
+        },
+        {
+            "id": "12.jpg",
+            "src": "Imagens/12.jpg",
+            "title": "Ritmo",
+            "year": "1971",
+            "technique": "Serigrafia",
+            "tone": 56,
+            "tags": [
+                "preto",
+                "geometria",
+                "movimento"
+            ],
+            "inv": "INV-9085",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Wesley Duke Lee",
+                "Ivan Serpa",
+                "Francisco Brennand",
+                "Mira Schendel"
+            ],
+            "city": "Bauru"
+        },
+        {
+            "id": "13.jpg",
+            "src": "Imagens/13.jpg",
+            "title": "Corte",
+            "year": "1931",
+            "technique": "Gravura em Metal",
+            "tone": 90,
+            "tags": [
+                "geometria",
+                "esboço",
+                "linhas"
+            ],
+            "inv": "INV-7304",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Anna Maria Maiolino",
+                "Anita Malfatti",
+                "Hélio Oiticica",
+                "Tomie Ohtake"
+            ],
+            "city": "Sorocaba"
+        },
+        {
+            "id": "14.jpg",
+            "src": "Imagens/14.jpg",
+            "title": "Desvio",
+            "year": "1943",
+            "technique": "Aquarela",
+            "tone": 80,
+            "tags": [
+                "abstrato",
+                "linhas",
+                "movimento"
+            ],
+            "inv": "INV-5371",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Lygia Pape",
+                "Anita Malfatti",
+                "Tomie Ohtake"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "15.jpg",
+            "src": "Imagens/15.jpg",
+            "title": "Cinza Primal",
+            "year": "1958",
+            "technique": "Serigrafia",
+            "tone": 30,
+            "tags": [
+                "matriz",
+                "abstrato",
+                "branco"
+            ],
+            "inv": "INV-9201",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Manabu Mabe",
+                "Iberê Camargo",
+                "Ivan Serpa",
+                "Rubem Valentim"
+            ],
+            "city": "Sorocaba"
+        },
+        {
+            "id": "16.jpg",
+            "src": "Imagens/16.jpg",
+            "title": "Foco",
+            "year": "1949",
+            "technique": "Aquarela",
+            "tone": 74,
+            "tags": [
+                "forma",
+                "preto",
+                "geometria"
+            ],
+            "inv": "INV-7126",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Willys de Castro",
+                "Alfredo Volpi",
+                "Tarsila do Amaral",
+                "Mira Schendel"
+            ],
+            "city": "São José dos Campos"
+        },
+        {
+            "id": "17.jpg",
+            "src": "Imagens/17.jpg",
+            "title": "Cinza Primal",
+            "year": "1989",
+            "technique": "Aquarela",
+            "tone": 72,
+            "tags": [
+                "abstrato",
+                "linhas",
+                "contraste"
+            ],
+            "inv": "INV-6038",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Antonio Dias",
+                "Djanira da Motta e Silva",
+                "Ivan Serpa",
+                "Manabu Mabe"
+            ],
+            "city": "São Paulo"
+        },
+        {
+            "id": "18.jpg",
+            "src": "Imagens/18.jpg",
+            "title": "Quimera",
+            "year": "1985",
+            "technique": "Xilogravura",
+            "tone": 20,
+            "tags": [
+                "matriz",
+                "linhas",
+                "movimento"
+            ],
+            "inv": "INV-3060",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Arthur Bispo do Rosário",
+                "Tomie Ohtake",
+                "Anita Malfatti",
+                "Livio Abramo",
+                "Francisco Brennand"
+            ],
+            "city": "Santos"
+        },
+        {
+            "id": "19.jpg",
+            "src": "Imagens/19.jpg",
+            "title": "Rastro",
+            "year": "1987",
+            "technique": "Aquarela",
+            "tone": 77,
+            "tags": [
+                "forma",
+                "esboço",
+                "preto"
+            ],
+            "inv": "INV-9835",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Lygia Clark",
+                "Francisco Brennand",
+                "Lygia Pape"
+            ],
+            "city": "Piracicaba"
+        },
+        {
+            "id": "20.jpg",
+            "src": "Imagens/20.jpg",
+            "title": "Alvorada",
+            "year": "1989",
+            "technique": "Aquarela",
+            "tone": 66,
+            "tags": [
+                "movimento",
+                "matriz",
+                "linhas"
+            ],
+            "inv": "INV-5061",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Anna Bella Geiger",
+                "Iberê Camargo",
+                "Francisco Brennand",
+                "Hélio Oiticica"
+            ],
+            "city": "Piracicaba"
+        },
+        {
+            "id": "21.jpg",
+            "src": "Imagens/21.jpg",
+            "title": "Cinza Primal",
+            "year": "1951",
+            "technique": "Xilogravura",
+            "tone": 85,
+            "tags": [
+                "movimento",
+                "preto",
+                "forma"
+            ],
+            "inv": "INV-1117",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Lygia Pape",
+                "Amilcar de Castro",
+                "Arcangelo Ianelli",
+                "Antonio Dias"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "22.jpg",
+            "src": "Imagens/22.jpg",
+            "title": "Essência",
+            "year": "1945",
+            "technique": "Xilogravura",
+            "tone": 14,
+            "tags": [
+                "contraste",
+                "linhas",
+                "movimento"
+            ],
+            "inv": "INV-4899",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Rubem Valentim",
+                "Mira Schendel",
+                "Francisco Brennand",
+                "Ivan Serpa"
+            ],
+            "city": "Piracicaba"
+        },
+        {
+            "id": "23.jpg",
+            "src": "Imagens/23.jpg",
+            "title": "Ímpeto",
+            "year": "1957",
+            "technique": "Gravura em Metal",
+            "tone": 83,
+            "tags": [
+                "forma",
+                "matriz",
+                "preto"
+            ],
+            "inv": "INV-8749",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Lygia Pape",
+                "Tomie Ohtake",
+                "Cândido Portinari",
+                "Iberê Camargo"
+            ],
+            "city": "Sorocaba"
+        },
+        {
+            "id": "24.jpg",
+            "src": "Imagens/24.jpg",
+            "title": "Fragmento",
+            "year": "1930",
+            "technique": "Xilogravura",
+            "tone": 65,
+            "tags": [
+                "contraste",
+                "esboço",
+                "forma"
+            ],
+            "inv": "INV-8651",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Livio Abramo",
+                "Antonio Dias",
+                "Hélio Oiticica",
+                "Tarsila do Amaral",
+                "Arthur Bispo do Rosário"
+            ],
+            "city": "Sorocaba"
+        },
+        {
+            "id": "25.jpg",
+            "src": "Imagens/25.jpg",
+            "title": "Fissão",
+            "year": "1935",
+            "technique": "Serigrafia",
+            "tone": 53,
+            "tags": [
+                "linhas",
+                "preto",
+                "forma"
+            ],
+            "inv": "INV-4116",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Carlos Scliar",
+                "Ivan Serpa",
+                "Rubem Valentim",
+                "Lasar Segall"
+            ],
+            "city": "Franca"
+        },
+        {
+            "id": "26.jpg",
+            "src": "Imagens/26.jpg",
+            "title": "Fragmento",
+            "year": "1972",
+            "technique": "Serigrafia",
+            "tone": 33,
+            "tags": [
+                "branco",
+                "matriz",
+                "preto"
+            ],
+            "inv": "INV-2235",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Antonio Dias",
+                "Anita Malfatti",
+                "Francisco Brennand"
+            ],
+            "city": "Campinas"
+        },
+        {
+            "id": "27.jpg",
+            "src": "Imagens/27.jpg",
+            "title": "Gênese",
+            "year": "1972",
+            "technique": "Xilogravura",
+            "tone": 79,
+            "tags": [
+                "abstrato",
+                "linhas",
+                "preto"
+            ],
+            "inv": "INV-3724",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Iberê Camargo",
+                "Tarsila do Amaral",
+                "Antonio Dias"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "28.jpg",
+            "src": "Imagens/28.jpg",
+            "title": "Ruptura",
+            "year": "1964",
+            "technique": "Gravura em Metal",
+            "tone": 61,
+            "tags": [
+                "abstrato",
+                "geometria",
+                "esboço"
+            ],
+            "inv": "INV-1035",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Arcangelo Ianelli",
+                "Carybé",
+                "Alfredo Volpi"
+            ],
+            "city": "Piracicaba"
+        },
+        {
+            "id": "29.jpg",
+            "src": "Imagens/29.jpg",
+            "title": "Vértice",
+            "year": "1990",
+            "technique": "Aquarela",
+            "tone": 64,
+            "tags": [
+                "movimento",
+                "matriz",
+                "geometria"
+            ],
+            "inv": "INV-4111",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Cildo Meireles",
+                "Mira Schendel",
+                "Willys de Castro",
+                "Tomie Ohtake",
+                "Rubem Valentim"
+            ],
+            "city": "Bauru"
+        },
+        {
+            "id": "30.jpg",
+            "src": "Imagens/30.jpg",
+            "title": "Espectro",
+            "year": "1974",
+            "technique": "Xilogravura",
+            "tone": 50,
+            "tags": [
+                "abstrato",
+                "espaço",
+                "matriz"
+            ],
+            "inv": "INV-9238",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Cildo Meireles",
+                "Cândido Portinari",
+                "Lygia Pape",
+                "Anna Maria Maiolino",
+                "Hélio Oiticica"
+            ],
+            "city": "Sorocaba"
+        },
+        {
+            "id": "31.jpg",
+            "src": "Imagens/31.jpg",
+            "title": "Luz Negra",
+            "year": "1988",
+            "technique": "Xilogravura",
+            "tone": 33,
+            "tags": [
+                "linhas",
+                "forma",
+                "espaço"
+            ],
+            "inv": "INV-4853",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Djanira da Motta e Silva",
+                "Aldemir Martins",
+                "Arcangelo Ianelli",
+                "Livio Abramo"
+            ],
+            "city": "Bauru"
+        },
+        {
+            "id": "32.jpg",
+            "src": "Imagens/32.jpg",
+            "title": "Corte",
+            "year": "1950",
+            "technique": "Xilogravura",
+            "tone": 89,
+            "tags": [
+                "linhas",
+                "esboço",
+                "movimento"
+            ],
+            "inv": "INV-6183",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Carybé",
+                "Antonio Dias",
+                "Carlos Scliar",
+                "Lasar Segall",
+                "Wesley Duke Lee"
+            ],
+            "city": "Campinas"
+        },
+        {
+            "id": "33.jpg",
+            "src": "Imagens/33.jpg",
+            "title": "Fragmento",
+            "year": "1934",
+            "technique": "Gravura em Metal",
+            "tone": 43,
+            "tags": [
+                "esboço",
+                "geometria",
+                "branco"
+            ],
+            "inv": "INV-8491",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Anna Bella Geiger",
+                "Cândido Portinari",
+                "Aldemir Martins"
+            ],
+            "city": "Piracicaba"
+        },
+        {
+            "id": "34.jpg",
+            "src": "Imagens/34.jpg",
+            "title": "Foco",
+            "year": "1937",
+            "technique": "Serigrafia",
+            "tone": 89,
+            "tags": [
+                "forma",
+                "linhas",
+                "espaço"
+            ],
+            "inv": "INV-9808",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Anita Malfatti",
+                "Cândido Portinari",
+                "Alfredo Volpi",
+                "Carlos Scliar",
+                "Lygia Clark"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "35.jpg",
+            "src": "Imagens/35.jpg",
+            "title": "Desvio",
+            "year": "1964",
+            "technique": "Gravura em Metal",
+            "tone": 54,
+            "tags": [
+                "linhas",
+                "preto",
+                "contraste"
+            ],
+            "inv": "INV-5669",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Tarsila do Amaral",
+                "Anita Malfatti",
+                "Anna Bella Geiger"
+            ],
+            "city": "Santos"
+        },
+        {
+            "id": "36.jpg",
+            "src": "Imagens/36.jpg",
+            "title": "Quimera",
+            "year": "1970",
+            "technique": "Xilogravura",
+            "tone": 80,
+            "tags": [
+                "branco",
+                "linhas",
+                "geometria"
+            ],
+            "inv": "INV-5333",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Maria Bonomi",
+                "Hélio Oiticica",
+                "Amilcar de Castro",
+                "Cildo Meireles"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "37.jpg",
+            "src": "Imagens/37.jpg",
+            "title": "Fragmento",
+            "year": "1976",
+            "technique": "Aquarela",
+            "tone": 46,
+            "tags": [
+                "forma",
+                "preto",
+                "contraste"
+            ],
+            "inv": "INV-4335",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Lasar Segall",
+                "Anna Maria Maiolino",
+                "Arthur Bispo do Rosário"
+            ],
+            "city": "Franca"
+        },
+        {
+            "id": "38.jpg",
+            "src": "Imagens/38.jpg",
+            "title": "Cinza Primal",
+            "year": "1946",
+            "technique": "Aquarela",
+            "tone": 16,
+            "tags": [
+                "linhas",
+                "esboço",
+                "branco"
+            ],
+            "inv": "INV-1722",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Cândido Portinari",
+                "Anna Maria Maiolino",
+                "Djanira da Motta e Silva",
+                "Amilcar de Castro",
+                "Carlos Scliar"
+            ],
+            "city": "São José dos Campos"
+        },
+        {
+            "id": "39.jpg",
+            "src": "Imagens/39.jpg",
+            "title": "Miragem",
+            "year": "1969",
+            "technique": "Aquarela",
+            "tone": 30,
+            "tags": [
+                "matriz",
+                "movimento",
+                "esboço"
+            ],
+            "inv": "INV-1158",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Antonio Dias",
+                "Cildo Meireles",
+                "Anna Bella Geiger",
+                "Wesley Duke Lee",
+                "Djanira da Motta e Silva"
+            ],
+            "city": "Santos"
+        },
+        {
+            "id": "40.jpg",
+            "src": "Imagens/40.jpg",
+            "title": "Matéria",
+            "year": "1948",
+            "technique": "Xilogravura",
+            "tone": 57,
+            "tags": [
+                "forma",
+                "movimento",
+                "geometria"
+            ],
+            "inv": "INV-8041",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Carlos Scliar",
+                "Rubem Valentim",
+                "Lygia Clark"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "41.jpg",
+            "src": "Imagens/41.jpg",
+            "title": "Fragmento",
+            "year": "1990",
+            "technique": "Aquarela",
+            "tone": 15,
+            "tags": [
+                "contraste",
+                "preto",
+                "forma"
+            ],
+            "inv": "INV-2684",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Cildo Meireles",
+                "Lasar Segall",
+                "Mira Schendel",
+                "Iberê Camargo"
+            ],
+            "city": "Bauru"
+        },
+        {
+            "id": "42.jpg",
+            "src": "Imagens/42.jpg",
+            "title": "Ímpeto",
+            "year": "1983",
+            "technique": "Gravura em Metal",
+            "tone": 40,
+            "tags": [
+                "geometria",
+                "espaço",
+                "esboço"
+            ],
+            "inv": "INV-1406",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Wesley Duke Lee",
+                "Rubem Valentim",
+                "Anita Malfatti",
+                "Djanira da Motta e Silva"
+            ],
+            "city": "Bauru"
+        },
+        {
+            "id": "43.jpg",
+            "src": "Imagens/43.jpg",
+            "title": "Espaço Mudo",
+            "year": "1935",
+            "technique": "Gravura em Metal",
+            "tone": 44,
+            "tags": [
+                "geometria",
+                "linhas",
+                "esboço"
+            ],
+            "inv": "INV-1634",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Lygia Clark",
+                "Hélio Oiticica",
+                "Tarsila do Amaral",
+                "Anna Bella Geiger"
+            ],
+            "city": "Santos"
+        },
+        {
+            "id": "44.jpg",
+            "src": "Imagens/44.jpg",
+            "title": "Vórtice",
+            "year": "1957",
+            "technique": "Serigrafia",
+            "tone": 54,
+            "tags": [
+                "branco",
+                "preto",
+                "forma"
+            ],
+            "inv": "INV-1387",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Anna Bella Geiger",
+                "Mira Schendel",
+                "Lasar Segall"
+            ],
+            "city": "São Paulo"
+        },
+        {
+            "id": "45.jpg",
+            "src": "Imagens/45.jpg",
+            "title": "Rastro",
+            "year": "1957",
+            "technique": "Aquarela",
+            "tone": 18,
+            "tags": [
+                "branco",
+                "contraste",
+                "movimento"
+            ],
+            "inv": "INV-7548",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Ivan Serpa",
+                "Livio Abramo",
+                "Maria Bonomi"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "46.jpg",
+            "src": "Imagens/46.jpg",
+            "title": "Trama",
+            "year": "1983",
+            "technique": "Xilogravura",
+            "tone": 43,
+            "tags": [
+                "geometria",
+                "forma",
+                "branco"
+            ],
+            "inv": "INV-1626",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Alfredo Volpi",
+                "Carybé",
+                "Cildo Meireles",
+                "Lygia Clark"
+            ],
+            "city": "Piracicaba"
+        },
+        {
+            "id": "47.jpg",
+            "src": "Imagens/47.jpg",
+            "title": "Trama",
+            "year": "1965",
+            "technique": "Aquarela",
+            "tone": 50,
+            "tags": [
+                "esboço",
+                "forma",
+                "movimento"
+            ],
+            "inv": "INV-2894",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Tomie Ohtake",
+                "Tarsila do Amaral",
+                "Francisco Brennand",
+                "Willys de Castro",
+                "Djanira da Motta e Silva"
+            ],
+            "city": "Jundiaí"
+        },
+        {
+            "id": "48.jpg",
+            "src": "Imagens/48.jpg",
+            "title": "Corte",
+            "year": "1947",
+            "technique": "Aquarela",
+            "tone": 15,
+            "tags": [
+                "esboço",
+                "abstrato",
+                "movimento"
+            ],
+            "inv": "INV-9821",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Tarsila do Amaral",
+                "Djanira da Motta e Silva",
+                "Arcangelo Ianelli",
+                "Rubem Valentim"
+            ],
+            "city": "Franca"
+        },
+        {
+            "id": "49.jpg",
+            "src": "Imagens/49.jpg",
+            "title": "Vínculo",
+            "year": "1936",
+            "technique": "Xilogravura",
+            "tone": 52,
+            "tags": [
+                "forma",
+                "contraste",
+                "linhas"
+            ],
+            "inv": "INV-5920",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Manabu Mabe",
+                "Arthur Bispo do Rosário",
+                "Livio Abramo"
+            ],
+            "city": "Ribeirão Preto"
+        },
+        {
+            "id": "50.jpg",
+            "src": "Imagens/50.jpg",
+            "title": "Síntese",
+            "year": "1930",
+            "technique": "Aquarela",
+            "tone": 61,
+            "tags": [
+                "branco",
+                "movimento",
+                "geometria"
+            ],
+            "inv": "INV-4143",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Aldemir Martins",
+                "Cândido Portinari",
+                "Manabu Mabe",
+                "Djanira da Motta e Silva",
+                "Anna Bella Geiger"
+            ],
+            "city": "São José dos Campos"
+        },
+        {
+            "id": "51.jpg",
+            "src": "Imagens/51.jpg",
+            "title": "Raiz",
+            "year": "1959",
+            "technique": "Aquarela",
+            "tone": 61,
+            "tags": [
+                "movimento",
+                "abstrato",
+                "branco"
+            ],
+            "inv": "INV-5700",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Willys de Castro",
+                "Carybé",
+                "Cândido Portinari",
+                "Francisco Brennand"
+            ],
+            "city": "Campinas"
+        },
+        {
+            "id": "52.jpg",
+            "src": "Imagens/52.jpg",
+            "title": "Onda",
+            "year": "1990",
+            "technique": "Serigrafia",
+            "tone": 66,
+            "tags": [
+                "matriz",
+                "preto",
+                "movimento"
+            ],
+            "inv": "INV-8752",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Djanira da Motta e Silva",
+                "Carybé",
+                "Lygia Clark",
+                "Carlos Scliar"
+            ],
+            "city": "Campinas"
+        },
+        {
+            "id": "53.jpg",
+            "src": "Imagens/53.jpg",
+            "title": "Ritmo",
+            "year": "1978",
+            "technique": "Aquarela",
+            "tone": 21,
+            "tags": [
+                "preto",
+                "branco",
+                "espaço"
+            ],
+            "inv": "INV-4262",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Arcangelo Ianelli",
+                "Amilcar de Castro",
+                "Alfredo Volpi",
+                "Rubem Valentim"
+            ],
+            "city": "Franca"
+        },
+        {
+            "id": "54.jpg",
+            "src": "Imagens/54.jpg",
+            "title": "Gênese",
+            "year": "1989",
+            "technique": "Gravura em Metal",
+            "tone": 70,
+            "tags": [
+                "forma",
+                "linhas",
+                "matriz"
+            ],
+            "inv": "INV-7790",
+            "description": "Uma obra de forte apelo visual onde formas e texturas dialogam na construção de uma poética singular. A escolha dos elementos visuais demonstra a intenção em desafiar a percepção do espectador e explorar os limites da técnica empregada.",
+            "context": "Produzida num contexto de intensa efervescência cultural, esta peça reflete as inovações estéticas do seu tempo. As influências sociopolíticas e o constante intercâmbio de ideais com outros artistas contemporâneos estão materializados na precisão dos seus traços.",
+            "relatedAuthors": [
+                "Arcangelo Ianelli",
+                "Hélio Oiticica",
+                "Mira Schendel",
+                "Manabu Mabe"
+            ],
+            "city": "São José dos Campos"
+        }
+    ]
+}

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa Avançada - Pinacoteca</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .advanced-header {
+            padding: 8rem 5% 4rem;
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .filter-section {
+            background: var(--white);
+            padding: 3rem 5%;
+            margin: -2rem 5% 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            z-index: 10;
+            position: relative;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            align-items: flex-end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filter-group input,
+        .filter-group select {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .filter-group input:focus,
+        .filter-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(227, 176, 75, 0.1);
+        }
+
+        /* Affective Tone Slider & Full Width block */
+        .tone-slider-container,
+        .full-width-filter {
+            grid-column: 1 / -1;
+            padding-top: 1rem;
+            border-top: 1px dashed #eee;
+            margin-top: 1rem;
+        }
+
+        .tone-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 6px;
+            background: #eee;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dual Slider specific CSS */
+        .dual-range-slider {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .slider-track {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #e0e0e0;
+            border-radius: 4px;
+        }
+
+        .dual-range-slider input[type="range"] {
+            position: absolute;
+            width: 100%;
+            pointer-events: none;
+            background: none;
+            appearance: none;
+            -webkit-appearance: none;
+            margin: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .dual-range-slider input[type="range"]::-webkit-slider-thumb {
+            pointer-events: auto;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-values {
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 10px;
+        }
+
+        /* Map specific CSS */
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 0 auto 1.5rem;
+            background: #fafafa;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .sp-abstract-map {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .city-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .city-dot:hover {
+            transform: translate(-50%, -50%) scale(1.3);
+            background-color: #888;
+        }
+
+        .city-dot.selected {
+            background-color: var(--accent-color);
+            transform: translate(-50%, -50%) scale(1.2);
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .city-search-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .autocomplete-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .autocomplete-dropdown.hidden {
+            display: none;
+        }
+
+        .autocomplete-item {
+            padding: 0.8rem 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f4f4f4;
+            transition: background 0.2s;
+        }
+
+        .autocomplete-item:hover {
+            background: #f9f9f9;
+        }
+
+        .selected-cities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .city-chip {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .city-chip i {
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <nav id="navbar" class="scrolled" aria-label="Navegação principal">
+        <div class="logo">PINACOTECA</div>
+        <ul class="nav-links">
+            <li><a href="index.html" title="Início"><i class="fas fa-home"></i> <span class="nav-label">Início</span></a></li>
+            <li><a href="advanced-search.html" style="color: var(--primary-color); font-weight: bold;" title="Pesquisa Avançada"><i class="fas fa-sliders"></i> <span class="nav-label">Pesquisa Avançada</span></a></li>
+            <li><a href="#" title="Acervo"><i class="fas fa-images"></i> <span class="nav-label">Acervo</span></a></li>
+            <li><a href="#" title="Sobre"><i class="fas fa-info-circle"></i> <span class="nav-label">Sobre</span></a></li>
+            <li><a href="#" style="border: 1px solid rgba(0,0,0,0.3); padding: 4px 10px; border-radius: 4px; color: var(--primary-color);" title="Login / Cadastro"><i class="fas fa-user-circle"></i> <span class="nav-label">Login / Cadastro</span></a></li>
+        </ul>
+    </nav>
+
+    <header class="advanced-header">
+        <h1 class="serif">Busca no Acervo</h1>
+        <p>Refine sua busca pelas obras da artista Fayga Ostrower.</p>
+    </header>
+
+    <section class="filter-section">
+        <form id="advancedSearchForm" class="filter-grid" onsubmit="return false;">
+
+            <div class="filter-group full-width-filter" style="margin-bottom: 2rem;">
+                <label><i class="fas fa-eye"></i> Busca por Similaridade Visual</label>
+                <div class="upload-area" id="uploadArea">
+                    <div class="scanning-line"></div>
+                    <div class="processing-overlay" id="processingOverlay">
+                        <div class="spinner"></div>
+                        <p style="color: var(--primary-color); font-weight: 600;">Analisando padrões visuais...</p>
+                    </div>
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <div class="upload-text">
+                        <h3>Arraste uma imagem ou clique para selecionar</h3>
+                        <p>Formatos aceitos: JPG, PNG. Tamanho máx: 5MB</p>
+                    </div>
+                    <input type="file" id="visualSearchInput" hidden accept="image/*">
+                    
+                    <div id="uploadPreviewContainer" class="upload-preview-container">
+                        <button class="btn-remove-upload" id="btnRemoveUpload" title="Remover imagem">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <img src="" alt="Preview" id="uploadPreview" class="upload-preview">
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-success); font-weight: 600;">
+                            <i class="fas fa-check-circle"></i> Imagem carregada pronta para busca
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="filterTag"><i class="fas fa-font"></i> Busca por Termo</label>
+                <input type="text" id="filterTag" placeholder="Ex: Abstração, Composição...">
+            </div>
+
+            <div class="filter-group">
+                <label for="filterTechnique"><i class="fas fa-layer-group"></i> Técnica</label>
+                <select id="filterTechnique">
+                    <option value="">Todas as técnicas</option>
+                    <option value="Xilogravura">Xilogravura</option>
+                    <option value="Gravura em Metal">Gravura em Metal</option>
+                    <option value="Aquarela">Aquarela</option>
+                    <option value="Serigrafia">Serigrafia</option>
+                </select>
+            </div>
+
+            <div class="filter-group full-width-filter"
+                style="border-top: 1px dashed #eee; padding-top: 1rem; margin-top: 1rem;">
+                <label><i class="fas fa-calendar-alt"></i> Data Inicial e Final</label>
+                <div class="dual-range-slider">
+                    <div class="slider-track"></div>
+                    <input type="range" id="filterYearMin" min="1930" max="1990" value="1930" class="range-min">
+                    <input type="range" id="filterYearMax" min="1930" max="1990" value="1990" class="range-max">
+                </div>
+                <div class="slider-values">
+                    <span id="yearMinVal">1930</span> - <span id="yearMaxVal">1990</span>
+                </div>
+            </div>
+
+            <div class="tone-slider-container">
+                <label><i class="fas fa-masks-theater"></i> Faixa de Tom Afetivo</label>
+                <div class="dual-range-slider">
+                    <div class="slider-track"></div>
+                    <input type="range" id="filterToneMin" min="0" max="100" value="0" class="range-min">
+                    <input type="range" id="filterToneMax" min="0" max="100" value="100" class="range-max">
+                </div>
+                <div class="slider-values">
+                    <span id="toneMinVal" style="float: left; color: #555; font-size: 0.8rem;">Melancólico /
+                        Introspectivo (0%)</span>
+                    <span id="toneMaxVal" style="float: right; color: #555; font-size: 0.8rem;">Vibrante / Enérgico
+                        (100%)</span>
+                    <div style="clear: both;"></div>
+                    Faixa: <span id="toneRangeLabel">0% - 100%</span>
+                </div>
+            </div>
+
+            <div class="filter-group full-width-filter map-filter-section"
+                style="padding-top:1rem; margin-top:1rem; border-top: 1px dashed #eee;">
+                <div class="accordion-header"
+                    onclick="const b = document.getElementById('mapAccordion'); b.style.display = (b.style.display === 'none' ? 'block' : 'none'); const i = this.querySelector('i.fa-chevron-down, i.fa-chevron-up'); if(i){i.classList.toggle('fa-chevron-down'); i.classList.toggle('fa-chevron-up');}"
+                    style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fafafa; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #ddd; font-weight: bold; color: var(--primary-color);">
+                    <span><i class="fas fa-map-marked-alt"></i> Filtrar por Localidade no Estado de SP</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+
+                <div id="mapAccordion" style="display: none; margin-top: 1.5rem;">
+                    <div class="map-container" aria-label="Mapa interativo com cidades que possuem obras" tabindex="0">
+                        <img src="https://servicodados.ibge.gov.br/api/v3/malhas/estados/35?formato=image/svg+xml"
+                            alt="Mapa de São Paulo"
+                            style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4); opacity: 0.15; position: absolute; top:0; left:0; pointer-events:none;">
+
+                        <!-- City Dots -->
+                        <div class="city-dot" data-city="Ribeirão Preto" style="top: 25%; left: 45%;"
+                            title="Ribeirão Preto" tabindex="0" role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="Franca" style="top: 15%; left: 52%;" title="Franca"
+                            tabindex="0" role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="Bauru" style="top: 45%; left: 35%;" title="Bauru" tabindex="0"
+                            role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="Piracicaba" style="top: 55%; left: 55%;" title="Piracicaba"
+                            tabindex="0" role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="Campinas" style="top: 60%; left: 59%;" title="Campinas"
+                            tabindex="0" role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="Sorocaba" style="top: 70%; left: 55%;" title="Sorocaba"
+                            tabindex="0" role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="Jundiaí" style="top: 64%; left: 61%;" title="Jundiaí"
+                            tabindex="0" role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="São Paulo" style="top: 68%; left: 63%;" title="São Paulo"
+                            tabindex="0" role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="São José dos Campos" style="top: 60%; left: 68%;"
+                            title="São José dos Campos" tabindex="0" role="button" aria-pressed="false"></div>
+                        <div class="city-dot" data-city="Santos" style="top: 72%; left: 64%;" title="Santos"
+                            tabindex="0" role="button" aria-pressed="false"></div>
+                    </div>
+
+                    <div class="city-search-container">
+                        <div class="city-input-wrapper" style="position: relative;">
+                            <input type="text" id="citySearchInput"
+                                placeholder="Busque e adicione uma cidade (ex: Campinas)" autocomplete="off">
+                            <div id="cityAutocomplete" class="autocomplete-dropdown hidden"></div>
+                        </div>
+                        <div id="selectedCitiesContainer" class="selected-cities">
+                            <!-- Chips selected cities will be appended here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <main id="main-content" class="gallery-section">
+        <div class="section-header">
+            <div>
+                <h2>Resultados da Busca</h2>
+                <p id="resultsCount" class="text-light" aria-live="polite">Exibindo todas as obras</p>
+            </div>
+        </div>
+
+        <div id="gallery" class="gallery-grid">
+            <!-- Cards will be injected by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">PINACOTECA</div>
+        <p>Acervo digital aberto ao público.</p>
+    </footer>
+
+    <!-- Accessibility Floating Button (panel injected by accessibility.js) -->
+    <div class="acc-trigger" role="button" aria-label="Menu de Acessibilidade" aria-expanded="false" tabindex="0">
+        <i class="fas fa-universal-access"></i>
+        <div class="acc-tooltip">Acessibilidade</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="profile.js"></script>
+</body>
+
+</html>

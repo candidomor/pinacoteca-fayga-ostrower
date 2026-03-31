@@ -1,0 +1,16 @@
+# Arquivos de desenvolvimento / geração
+gen_js.py
+generate_images.js
+
+# Pastas de documentação interna
+Descritivo/
+Tarefas/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+*.code-workspace
