@@ -37,47 +37,166 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-    // Helper to render gallery chunks
+    // Helper to create a single card element
+    function createCard(item) {
+        const card = document.createElement('a');
+        card.className = 'card';
+        card.href = `obra.html?id=${item.id}`;
+        card.style.textDecoration = 'none';
+        card.innerHTML = `
+            <div class="card-image">
+                <img src="${item.src}" alt="${item.title}" loading="lazy">
+                ${item.similarityMsg ? `<div class="similarity-overlay">${item.similarityMsg}</div>` : ''}
+            </div>
+            <div class="card-info">
+                <div class="card-title">${item.title}</div>
+                <div class="card-meta">
+                    <span><i class="fas fa-palette" style="opacity: 0.7; width: 16px;"></i> <b>Autoria:</b> Fayga Ostrower</span>
+                    <span><i class="fas fa-layer-group" style="opacity: 0.7; width: 16px;"></i> <b>Técnica:</b> ${item.technique}</span>
+                    <span><i class="fas fa-calendar-alt" style="opacity: 0.7; width: 16px;"></i> <b>Ano:</b> ${item.year}</span>
+                    <span><i class="fas fa-map-marker-alt" style="opacity: 0.7; width: 16px;"></i> <b>Local:</b> ${item.city || 'São Paulo'}</span>
+                </div>
+                <div style="margin-top: 1rem; text-align: right;">
+                    <span class="btn-ghost" style="border-radius: 4px; font-size: 0.85rem; padding: 6px 10px;">Ver Obra <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+        `;
+        return card;
+    }
+
+    // Pagination state for the main gallery
+    let paginationState = {
+        allItems: [],
+        visibleCount: 0,
+        initialCount: 4,
+        increment: 6,
+        isSearchActive: false
+    };
+
+    // Render paginated gallery (with load-more controls)
+    function renderGalleryPaginated(items, reset = true) {
+        const gallery = document.getElementById('gallery');
+        if (!gallery) return;
+
+        if (reset) {
+            paginationState.allItems = items;
+            paginationState.visibleCount = paginationState.initialCount;
+            gallery.innerHTML = '';
+        }
+
+        if (paginationState.allItems.length === 0) {
+            gallery.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #666;">Nenhuma obra encontrada.</div>';
+            updateLoadMoreControls();
+            return;
+        }
+
+        const toShow = paginationState.allItems.slice(0, paginationState.visibleCount);
+
+        // On reset, clear and render all visible cards
+        if (reset) {
+            toShow.forEach(item => gallery.appendChild(createCard(item)));
+        } else {
+            // Append only newly added cards
+            const prevCount = gallery.querySelectorAll('.card').length;
+            toShow.slice(prevCount).forEach(item => gallery.appendChild(createCard(item)));
+        }
+
+        updateLoadMoreControls();
+        updateResultsCount();
+    }
+
+    function updateResultsCount() {
+        const resultsCount = document.getElementById('resultsCount');
+        if (!resultsCount) return;
+        const total = paginationState.allItems.length;
+        const visible = Math.min(paginationState.visibleCount, total);
+        if (paginationState.isSearchActive) {
+            resultsCount.textContent = `Exibindo ${total} resultado${total !== 1 ? 's' : ''}`;
+        } else {
+            resultsCount.textContent = `Exibindo ${visible} de ${total} obras`;
+        }
+    }
+
+    function updateLoadMoreControls() {
+        let controls = document.getElementById('load-more-controls');
+        const gallery = document.getElementById('gallery');
+        if (!gallery) return;
+
+        const total = paginationState.allItems.length;
+        const visible = paginationState.visibleCount;
+        const hasMore = visible < total && total > 0;
+
+        // Remove controls if search is active or nothing to paginate
+        if (paginationState.isSearchActive || total <= paginationState.initialCount) {
+            if (controls) controls.remove();
+            return;
+        }
+
+        if (!controls) {
+            controls = document.createElement('div');
+            controls.id = 'load-more-controls';
+            controls.className = 'load-more-controls';
+            gallery.parentNode.insertBefore(controls, gallery.nextSibling);
+        }
+
+        controls.innerHTML = hasMore ? `
+            <button id="btn-load-more" class="btn btn-secondary load-more-btn">
+                <i class="fas fa-plus-circle"></i> Ver mais
+                <span class="load-more-badge">${Math.min(paginationState.increment, total - visible)} obras</span>
+            </button>
+            <button id="btn-expand-all" class="btn btn-ghost load-expand-btn">
+                <i class="fas fa-expand-alt"></i> Expandir tudo
+                <span style="opacity:0.6; font-size:0.8rem;">(${total - visible} restantes)</span>
+            </button>
+        ` : `
+            <div class="load-more-done">
+                <i class="fas fa-check-circle"></i> Todas as ${total} obras exibidas
+                <button id="btn-collapse" class="btn btn-ghost" style="margin-left:1rem; font-size:0.85rem;">
+                    <i class="fas fa-compress-alt"></i> Recolher
+                </button>
+            </div>
+        `;
+
+        // Bind buttons
+        const btnMore = document.getElementById('btn-load-more');
+        if (btnMore) {
+            btnMore.addEventListener('click', () => {
+                paginationState.visibleCount += paginationState.increment;
+                renderGalleryPaginated(null, false);
+            });
+        }
+        const btnExpand = document.getElementById('btn-expand-all');
+        if (btnExpand) {
+            btnExpand.addEventListener('click', () => {
+                paginationState.visibleCount = total;
+                renderGalleryPaginated(null, false);
+            });
+        }
+        const btnCollapse = document.getElementById('btn-collapse');
+        if (btnCollapse) {
+            btnCollapse.addEventListener('click', () => {
+                paginationState.visibleCount = paginationState.initialCount;
+                renderGalleryPaginated(paginationState.allItems, true);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    }
+
+    // Helper to render gallery (non-paginated, for related works etc.)
     function renderGallery(items, containerId = 'gallery') {
+        if (containerId === 'gallery') {
+            // Main gallery: use paginated render if no active search state override
+            renderGalleryPaginated(items, true);
+            return;
+        }
         const gallery = document.getElementById(containerId);
         if (!gallery) return;
         gallery.innerHTML = '';
-        
         if (items.length === 0) {
             gallery.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #666;">Nenhuma obra encontrada.</div>';
             return;
         }
-
-        items.forEach(item => {
-            const card = document.createElement('a'); // Anchor for navigation
-            card.className = 'card';
-            card.href = `obra.html?id=${item.id}`;
-            card.style.textDecoration = 'none';
-            card.innerHTML = `
-                <div class="card-image">
-                    <img src="${item.src}" alt="${item.title}" loading="lazy">
-                    ${item.similarityMsg ? `<div class="similarity-overlay">${item.similarityMsg}</div>` : ''}
-                </div>
-                <div class="card-info">
-                    <div class="card-title">${item.title}</div>
-                    <div class="card-meta">
-                        <span><i class="fas fa-palette" style="opacity: 0.7; width: 16px;"></i> <b>Autoria:</b> Fayga Ostrower</span>
-                        <span><i class="fas fa-layer-group" style="opacity: 0.7; width: 16px;"></i> <b>Técnica:</b> ${item.technique}</span>
-                        <span><i class="fas fa-calendar-alt" style="opacity: 0.7; width: 16px;"></i> <b>Ano:</b> ${item.year}</span>
-                        <span><i class="fas fa-map-marker-alt" style="opacity: 0.7; width: 16px;"></i> <b>Local:</b> ${item.city || 'São Paulo'}</span>
-                    </div>
-                    <div style="margin-top: 1rem; text-align: right;">
-                        <span class="btn-ghost" style="border-radius: 4px; font-size: 0.85rem; padding: 6px 10px;">Ver Obra <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            `;
-            gallery.appendChild(card);
-        });
-
-        const resultsCount = document.getElementById('resultsCount');
-        if (resultsCount && containerId === 'gallery') {
-            resultsCount.textContent = `Exibindo ${items.length} obras`;
-        }
+        items.forEach(item => gallery.appendChild(createCard(item)));
     }
 
     function initGalleryPage() {
@@ -85,9 +204,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const advForm = document.getElementById('advancedSearchForm');
 
         if (searchInput) {
-            renderGallery(images);
+            // Initial load: paginated
+            paginationState.isSearchActive = false;
+            renderGalleryPaginated(images, true);
+
             searchInput.addEventListener('input', (e) => {
-                const searchTerm = e.target.value.toLowerCase();
+                const searchTerm = e.target.value.toLowerCase().trim();
+                // When searching, show all results without pagination
+                paginationState.isSearchActive = searchTerm.length > 0;
+
                 const filtered = images.filter(img => {
                     return (img.title && img.title.toLowerCase().includes(searchTerm)) || 
                            (img.year && img.year.includes(searchTerm)) || 
@@ -95,7 +220,25 @@ document.addEventListener('DOMContentLoaded', () => {
                            (img.inv && img.inv.toLowerCase().includes(searchTerm)) ||
                            (img.tags && img.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
                 });
-                renderGallery(filtered);
+
+                if (paginationState.isSearchActive) {
+                    // Show all search results without pagination controls
+                    const gallery = document.getElementById('gallery');
+                    if (gallery) {
+                        gallery.innerHTML = '';
+                        if (filtered.length === 0) {
+                            gallery.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #666;">Nenhuma obra encontrada.</div>';
+                        } else {
+                            filtered.forEach(item => gallery.appendChild(createCard(item)));
+                        }
+                    }
+                    paginationState.allItems = filtered;
+                    updateResultsCount();
+                    updateLoadMoreControls();
+                } else {
+                    // Empty search: restore paginated view
+                    renderGalleryPaginated(images, true);
+                }
             });
         }
 

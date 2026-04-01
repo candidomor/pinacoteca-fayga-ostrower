@@ -302,33 +302,6 @@
     <section class="filter-section">
         <form id="advancedSearchForm" class="filter-grid" onsubmit="return false;">
 
-            <div class="filter-group full-width-filter" style="margin-bottom: 2rem;">
-                <label><i class="fas fa-eye"></i> Busca por Similaridade Visual</label>
-                <div class="upload-area" id="uploadArea">
-                    <div class="scanning-line"></div>
-                    <div class="processing-overlay" id="processingOverlay">
-                        <div class="spinner"></div>
-                        <p style="color: var(--primary-color); font-weight: 600;">Analisando padrões visuais...</p>
-                    </div>
-                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
-                    <div class="upload-text">
-                        <h3>Arraste uma imagem ou clique para selecionar</h3>
-                        <p>Formatos aceitos: JPG, PNG. Tamanho máx: 5MB</p>
-                    </div>
-                    <input type="file" id="visualSearchInput" hidden accept="image/*">
-                    
-                    <div id="uploadPreviewContainer" class="upload-preview-container">
-                        <button class="btn-remove-upload" id="btnRemoveUpload" title="Remover imagem">
-                            <i class="fas fa-times"></i>
-                        </button>
-                        <img src="" alt="Preview" id="uploadPreview" class="upload-preview">
-                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-success); font-weight: 600;">
-                            <i class="fas fa-check-circle"></i> Imagem carregada pronta para busca
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="filter-group">
                 <label for="filterTag"><i class="fas fa-font"></i> Busca por Termo</label>
                 <input type="text" id="filterTag" placeholder="Ex: Abstração, Composição...">
@@ -421,6 +394,32 @@
                         </div>
                         <div id="selectedCitiesContainer" class="selected-cities">
                             <!-- Chips selected cities will be appended here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group full-width-filter" style="padding-top: 1rem; margin-top: 1rem; border-top: 1px dashed #eee;">
+                <label><i class="fas fa-eye"></i> Busca por Similaridade Visual</label>
+                <div class="upload-area" id="uploadArea">
+                    <div class="scanning-line"></div>
+                    <div class="processing-overlay" id="processingOverlay">
+                        <div class="spinner"></div>
+                        <p style="color: var(--primary-color); font-weight: 600;">Analisando padrões visuais...</p>
+                    </div>
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <div class="upload-text">
+                        <h3>Arraste uma imagem ou clique para selecionar</h3>
+                        <p>Formatos aceitos: JPG, PNG. Tamanho máx: 5MB</p>
+                    </div>
+                    <input type="file" id="visualSearchInput" hidden accept="image/*">
+                    <div id="uploadPreviewContainer" class="upload-preview-container">
+                        <button class="btn-remove-upload" id="btnRemoveUpload" title="Remover imagem">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <img src="" alt="Preview" id="uploadPreview" class="upload-preview">
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-success); font-weight: 600;">
+                            <i class="fas fa-check-circle"></i> Imagem carregada pronta para busca
                         </div>
                     </div>
                 </div>
