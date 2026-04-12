@@ -637,3 +637,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Chatbot logic
+document.addEventListener('DOMContentLoaded', () => {
+    const chatTrigger = document.querySelector('.chat-trigger');
+    const chatPanel = document.querySelector('.chat-panel');
+    const chatClose = document.querySelector('.chat-panel-close');
+
+    if (chatTrigger && chatPanel) {
+        chatTrigger.addEventListener('click', () => {
+            chatPanel.classList.toggle('open');
+        });
+    }
+
+    if (chatClose && chatPanel) {
+        chatClose.addEventListener('click', () => {
+            chatPanel.classList.remove('open');
+        });
+    }
+});

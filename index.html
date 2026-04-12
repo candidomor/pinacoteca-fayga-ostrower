@@ -89,8 +89,50 @@
         <div class="acc-tooltip">Acessibilidade</div>
     </div>
 
+    
+    <!-- Chatbot Floating Panel -->
+    <div class="chat-trigger" role="button" aria-label="Assistente Inteligente" tabindex="0">
+        <i class="fas fa-robot"></i>
+        <div class="chat-tooltip">Assistente I.A.</div>
+    </div>
+    
+    <div class="chat-panel">
+        <div class="chat-panel-header">
+            <h3><i class="fas fa-robot"></i> Assistente</h3>
+            <button class="chat-panel-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-panel-body">
+            <div class="chat-bubble">
+                Olá! Sou o assistente da curadoria da Pinacoteca inteligente. Como posso guiar sua pesquisa hoje?
+            </div>
+            <div class="chat-bubble" style="background:#eef2f6; border-radius:12px; border-bottom-right-radius:2px; margin-left:20px; text-align:right; color:#2d3748; border-color:#d7e0e9;">
+                Gostaria de ver obras abstratas...
+            </div>
+            <div class="chat-bubble" style="opacity: 0.7; width: max-content; padding: 0.5rem 1rem;">
+                <i class="fas fa-circle" style="font-size:6px; animation: blink 1s infinite alternate;"></i>
+                <i class="fas fa-circle" style="font-size:6px; animation: blink 1s infinite alternate 0.2s;"></i>
+                <i class="fas fa-circle" style="font-size:6px; animation: blink 1s infinite alternate 0.4s;"></i>
+            </div>
+        </div>
+        <div class="chat-panel-input">
+            <input type="text" placeholder="Digite sua mensagem...">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script src="accessibility.js"></script>
     <script src="profile.js"></script>
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>

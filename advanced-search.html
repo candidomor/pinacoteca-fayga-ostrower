@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
+        <style>
         .advanced-header {
             padding: 8rem 5% 4rem;
             background: var(--primary-color);
@@ -20,60 +20,111 @@
         }
 
         .filter-section {
-            background: var(--white);
+            background: var(--bg-color);
             padding: 3rem 5%;
             margin: -2rem 5% 2rem;
             border-radius: 20px;
-            box-shadow: var(--shadow);
             z-index: 10;
             position: relative;
         }
 
+        /* GRID SYSTEM */
         .filter-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            align-items: flex-end;
+            align-items: start;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .filter-grid {
+                grid-template-columns: repeat(12, 1fr);
+            }
+            .col-4 { grid-column: span 4; }
+            .col-6 { grid-column: span 6; }
+            .col-8 { grid-column: span 8; }
+            .col-12 { grid-column: span 12; }
         }
 
         .filter-group {
             display: flex;
             flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .filter-group label, .filter-card-header, .tone-slider-container > label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-medium);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
             gap: 0.5rem;
         }
 
-        .filter-group label {
-            font-size: 0.85rem;
-            font-weight: 600;
+        .input-with-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-with-icon i {
+            position: absolute;
+            left: 1.2rem;
             color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+
+        .input-with-icon input {
+            padding-left: 3rem !important;
         }
 
         .filter-group input,
         .filter-group select {
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1; /* Ajustado contraste (antes #e2e8f0) */
+            border-radius: 10px;
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
+            color: var(--text-color);
             transition: var(--transition);
+            width: 100%;
         }
 
         .filter-group input:focus,
         .filter-group select:focus {
             outline: none;
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(227, 176, 75, 0.1);
+            background-color: #ffffff;
+            border-color: var(--accent-hover);
+            box-shadow: 0 0 0 3px rgba(91, 127, 166, 0.2);
         }
 
-        /* Affective Tone Slider & Full Width block */
-        .tone-slider-container,
-        .full-width-filter {
-            grid-column: 1 / -1;
-            padding-top: 1rem;
-            border-top: 1px dashed #eee;
-            margin-top: 1rem;
+        /* Filter Cards for complex elements */
+        .filter-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1; /* Ajustado contraste (antes #edf2f7) */
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-card:hover {
+            border-color: #94a3b8; /* Ajustado contraste do hover (antes #e2e8f0) */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        }
+
+        .tone-slider-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            flex-grow: 1;
+            justify-content: center;
         }
 
         .tone-labels {
@@ -85,38 +136,12 @@
             color: var(--text-light);
         }
 
-        input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100%;
-            height: 6px;
-            background: #eee;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            background: var(--secondary-color);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        input[type="range"]::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
         /* Dual Slider specific CSS */
         .dual-range-slider {
             position: relative;
             width: 100%;
             height: 40px;
-            margin-top: 10px;
+            margin-top: 5px;
             margin-bottom: 5px;
         }
 
@@ -124,10 +149,10 @@
             position: absolute;
             left: 0;
             right: 0;
-            height: 6px;
+            height: 8px;
             top: 50%;
             transform: translateY(-50%);
-            background: #e0e0e0;
+            background: #cbd5e1; /* Ajustado contraste (antes #edf2f7) */
             border-radius: 4px;
         }
 
@@ -147,20 +172,25 @@
             pointer-events: auto;
             -webkit-appearance: none;
             appearance: none;
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
-            background: var(--primary-color);
+            background: #ffffff;
             cursor: pointer;
-            border: 2px solid white;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            border: 3px solid var(--accent-hover);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s;
+        }
+
+        .dual-range-slider input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
         }
 
         .slider-values {
             text-align: center;
             font-size: 0.95rem;
             font-weight: 600;
-            color: var(--primary-color);
+            color: var(--accent-color);
             margin-top: 10px;
         }
 
@@ -170,10 +200,10 @@
             width: 100%;
             height: 400px;
             margin: 0 auto 1.5rem;
-            background: #fafafa;
+            background: #f8fafc;
             border-radius: 12px;
             overflow: hidden;
-            border: 1px solid #eee;
+            border: 1px solid #e2e8f0;
         }
 
         .sp-abstract-map {
@@ -189,8 +219,8 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            background-color: #ccc;
-            border: 1px solid #fff;
+            background-color: var(--text-light);
+            border: 2px solid #fff;
             border-radius: 50%;
             transform: translate(-50%, -50%);
             cursor: pointer;
@@ -199,14 +229,14 @@
         }
 
         .city-dot:hover {
-            transform: translate(-50%, -50%) scale(1.3);
-            background-color: #888;
+            transform: translate(-50%, -50%) scale(1.4);
+            background-color: var(--text-medium);
         }
 
         .city-dot.selected {
             background-color: var(--accent-color);
-            transform: translate(-50%, -50%) scale(1.2);
-            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+            transform: translate(-50%, -50%) scale(1.3);
+            box-shadow: 0 0 0 4px rgba(61, 90, 128, 0.2);
         }
 
         .city-search-container {
@@ -240,7 +270,7 @@
         }
 
         .autocomplete-item:hover {
-            background: #f9f9f9;
+            background: #f8fafc;
         }
 
         .selected-cities {
@@ -253,13 +283,14 @@
         .city-chip {
             background: var(--accent-color);
             color: white;
-            padding: 0.3rem 0.8rem;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
         }
 
         .city-chip i {
@@ -267,16 +298,165 @@
             font-size: 0.8rem;
         }
 
+        /* Upload Area */
+        .upload-area {
+            border: 2px dashed #cbd5e1;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .upload-area:hover {
+            border-color: var(--accent-hover);
+            background: #f1f5f9;
+        }
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+        .upload-area:hover .upload-icon {
+            color: var(--accent-hover);
+            transform: translateY(-5px);
+        }
+        .upload-text h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+        .upload-text p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .scanning-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-hover);
+            box-shadow: 0 0 10px var(--accent-hover);
+            opacity: 0;
+            z-index: 5;
+        }
+
+        .processing-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.9);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e2e8f0;
+            border-top: 4px solid var(--accent-hover);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         @keyframes popIn {
             from {
                 transform: scale(0.8);
                 opacity: 0;
             }
-
             to {
                 transform: scale(1);
                 opacity: 1;
             }
+        }
+
+        .upload-preview-container {
+            display: none;
+            position: relative;
+            margin-top: 1.5rem;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .upload-preview {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-remove-upload {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--color-error);
+            color: white;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        .btn-remove-upload:hover {
+            transform: scale(1.1);
+        }
+
+        /* Color Swatches */
+        .color-swatches-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+        .color-swatch {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .color-swatch:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .color-swatch.selected {
+            border-color: var(--accent-color);
+            transform: scale(1.1);
+            box-shadow: 0 0 0 3px rgba(61, 90, 128, 0.2);
+        }
+        .color-swatch.selected::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -300,27 +480,111 @@
     </header>
 
     <section class="filter-section">
-        <form id="advancedSearchForm" class="filter-grid" onsubmit="return false;">
+                        <form id="advancedSearchForm" class="filter-grid" onsubmit="return false;">
 
-            <div class="filter-group">
-                <label for="filterTag"><i class="fas fa-font"></i> Busca por Termo</label>
-                <input type="text" id="filterTag" placeholder="Ex: Abstração, Composição...">
+            <!-- Busca Principal de Termos -->
+            <div class="filter-group col-12">
+                <label for="filterTag"><i class="fas fa-search"></i> Busca por Termo (Palavra-chave)</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-font"></i>
+                    <input type="text" id="filterTag" placeholder="O que você procura? Ex: Abstração, Composição, Anos 60...">
+                </div>
             </div>
 
-            <div class="filter-group">
-                <label for="filterTechnique"><i class="fas fa-layer-group"></i> Técnica</label>
+            <!-- Chatbot Inteligente / Busca Natural -->
+            <div class="filter-group col-12">
+                <label for="smartSearchInput"><i class="fas fa-robot"></i> Assistente Inteligente</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-comment-dots" style="color: var(--accent-color);"></i>
+                    <input type="text" id="smartSearchInput" placeholder="Me explique o que você procura... (Ex: Mostre gravuras melancólicas dos anos 60)">
+                </div>
+            </div>
+
+            <!-- Autoria / Artista (Busca Dinâmica) -->
+            <div class="filter-card col-12">
+                <label class="filter-card-header"><i class="fas fa-users"></i> Autoria / Artista</label>
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 1rem; margin-top: 0;">Busque e adicione um ou mais artistas. (Digite e aperte Enter):</p>
+                
+                <div class="author-search-container" style="width: 100%;">
+                    <div class="author-input-wrapper" style="position: relative;">
+                        <div class="filter-group">
+                            <div class="input-with-icon">
+                                <i class="fas fa-user-pen"></i>
+                                <input type="text" id="authorSearchInput" placeholder="Digite o nome do artista..." autocomplete="off">
+                            </div>
+                        </div>
+                        <div id="authorAutocomplete" class="autocomplete-dropdown hidden"></div>
+                    </div>
+                    <div id="selectedAuthorsContainer" class="selected-cities" style="margin-top: 1rem;">
+                        <span class="city-chip" data-author="Fayga Ostrower">
+                            Fayga Ostrower <i class="fas fa-times" onclick="this.parentElement.remove()"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Linha 2: Categorizações (Taxonomia Clássica) -->
+            <div class="filter-group col-4">
+                <label for="filterType"><i class="fas fa-image"></i> Tipo de Obra</label>
+                <select id="filterType">
+                    <option value="">Todos os tipos</option>
+                    <option value="Gravura">Gravura / Matriz</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Desenho">Desenho</option>
+                    <option value="Fotografia">Fotografia</option>
+                    <option value="Objeto">Objeto 3D / Instalação</option>
+                </select>
+            </div>
+
+            <div class="filter-group col-4">
+                <label for="filterTechnique"><i class="fas fa-layer-group"></i> Técnica / Material</label>
                 <select id="filterTechnique">
                     <option value="">Todas as técnicas</option>
                     <option value="Xilogravura">Xilogravura</option>
                     <option value="Gravura em Metal">Gravura em Metal</option>
                     <option value="Aquarela">Aquarela</option>
                     <option value="Serigrafia">Serigrafia</option>
+                    <option value="Nanquim">Nanquim / Esboço</option>
                 </select>
             </div>
 
-            <div class="filter-group full-width-filter"
-                style="border-top: 1px dashed #eee; padding-top: 1rem; margin-top: 1rem;">
-                <label><i class="fas fa-calendar-alt"></i> Data Inicial e Final</label>
+            <div class="filter-group col-4">
+                <label for="filterTheme"><i class="fas fa-shapes"></i> Temática / Assunto</label>
+                <select id="filterTheme">
+                    <option value="">Todas as temáticas</option>
+                    <option value="Abstrato">Abstrato</option>
+                    <option value="Paisagem">Paisagem</option>
+                    <option value="Retrato">Retrato / Figura Humana</option>
+                    <option value="Geométrico">Geométrico</option>
+                    <option value="Natureza Morta">Natureza Morta</option>
+                </select>
+            </div>
+
+            <!-- Linha 3: Pesquisa Visual Semântica Inteligente -->
+            <div class="filter-card col-12" style="background-color: #fafbfc; border-color: #e2e8f0;">
+                <label class="filter-card-header" style="margin-bottom: 0.2rem;"><i class="fas fa-palette"></i> Paleta Predominante</label>
+                <p style="font-size: 0.8rem; color: #718096; margin-bottom: 0.8rem; margin-top: 0;">Selecione os tons marcantes. O sistema inteligente recuperará obras com essa atmosfera cromática.</p>
+                <div class="color-swatches-container">
+                    <div class="color-swatch" style="background-color: #e53e3e;" title="Vermelho Vibrante" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #ed8936;" title="Laranja" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #ecc94b;" title="Amarelo / Sol" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #48bb78;" title="Verde Natural" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #4299e1;" title="Azul Celeste" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #3182ce;" title="Azul Turquesa" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #2c5282;" title="Azul Profundo / Mar" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #805ad5;" title="Roxo / Místico" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #ed64a6;" title="Rosa" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #a0aec0;" title="Cinza Metálico" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #4a5568;" title="Cinza Escuro / Sombrio" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #1a202c;" title="Preto Intenso / Contraste" onclick="this.classList.toggle('selected')"></div>
+                    <div class="color-swatch" style="background-color: #ffffff; border: 1px solid #cbd5e1" title="Branco / Claro / Minimalista" onclick="this.classList.toggle('selected')"></div>
+                </div>
+            </div>
+
+            <!-- Linha 4: Sliders (Tempo e Engajamento Emocional) -->
+            <div class="filter-card col-6">
+                <label class="filter-card-header"><i class="fas fa-calendar-alt"></i> Data Inicial e Final</label>
                 <div class="dual-range-slider">
                     <div class="slider-track"></div>
                     <input type="range" id="filterYearMin" min="1930" max="1990" value="1930" class="range-min">
@@ -331,33 +595,31 @@
                 </div>
             </div>
 
-            <div class="tone-slider-container">
-                <label><i class="fas fa-masks-theater"></i> Faixa de Tom Afetivo</label>
+            <div class="filter-card col-6 tone-slider-container">
+                <label class="filter-card-header"><i class="fas fa-masks-theater"></i> Faixa de Tom Afetivo</label>
                 <div class="dual-range-slider">
                     <div class="slider-track"></div>
                     <input type="range" id="filterToneMin" min="0" max="100" value="0" class="range-min">
                     <input type="range" id="filterToneMax" min="0" max="100" value="100" class="range-max">
                 </div>
                 <div class="slider-values">
-                    <span id="toneMinVal" style="float: left; color: #555; font-size: 0.8rem;">Melancólico /
-                        Introspectivo (0%)</span>
-                    <span id="toneMaxVal" style="float: right; color: #555; font-size: 0.8rem;">Vibrante / Enérgico
-                        (100%)</span>
+                    <span id="toneMinVal" style="float: left; color: #718096; font-size: 0.8rem;">Melancólico / Introspectivo</span>
+                    <span id="toneMaxVal" style="float: right; color: #718096; font-size: 0.8rem;">Vibrante / Enérgico</span>
                     <div style="clear: both;"></div>
-                    Faixa: <span id="toneRangeLabel">0% - 100%</span>
+                    <div style="margin-top: 4px;">Faixa: <span id="toneRangeLabel">0% - 100%</span></div>
                 </div>
             </div>
 
-            <div class="filter-group full-width-filter map-filter-section"
-                style="padding-top:1rem; margin-top:1rem; border-top: 1px dashed #eee;">
+            <!-- Linha 5: Mapa -->
+            <div class="filter-card col-12">
                 <div class="accordion-header"
                     onclick="const b = document.getElementById('mapAccordion'); b.style.display = (b.style.display === 'none' ? 'block' : 'none'); const i = this.querySelector('i.fa-chevron-down, i.fa-chevron-up'); if(i){i.classList.toggle('fa-chevron-down'); i.classList.toggle('fa-chevron-up');}"
-                    style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fafafa; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #ddd; font-weight: bold; color: var(--primary-color);">
+                    style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-weight: bold; color: var(--text-color);">
                     <span><i class="fas fa-map-marked-alt"></i> Filtrar por Localidade no Estado de SP</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
 
-                <div id="mapAccordion" style="display: none; margin-top: 1.5rem;">
+                <div id="mapAccordion" style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #edf2f7;">
                     <div class="map-container" aria-label="Mapa interativo com cidades que possuem obras" tabindex="0">
                         <img src="https://servicodados.ibge.gov.br/api/v3/malhas/estados/35?formato=image/svg+xml"
                             alt="Mapa de São Paulo"
@@ -388,8 +650,11 @@
 
                     <div class="city-search-container">
                         <div class="city-input-wrapper" style="position: relative;">
-                            <input type="text" id="citySearchInput"
-                                placeholder="Busque e adicione uma cidade (ex: Campinas)" autocomplete="off">
+                            <div class="input-with-icon">
+                                <i class="fas fa-location-dot"></i>
+                                <input type="text" id="citySearchInput"
+                                    placeholder="Busque e adicione uma cidade (ex: Campinas)" autocomplete="off">
+                            </div>
                             <div id="cityAutocomplete" class="autocomplete-dropdown hidden"></div>
                         </div>
                         <div id="selectedCitiesContainer" class="selected-cities">
@@ -399,17 +664,18 @@
                 </div>
             </div>
 
-            <div class="filter-group full-width-filter" style="padding-top: 1rem; margin-top: 1rem; border-top: 1px dashed #eee;">
-                <label><i class="fas fa-eye"></i> Busca por Similaridade Visual</label>
+            <!-- Linha 6: Visão Computacional (Upload) -->
+            <div class="filter-card col-12">
+                <label class="filter-card-header" style="margin-bottom: 1rem;"><i class="fas fa-eye"></i> Busca por Similaridade Visual (Reconhecimento de Imagem)</label>
                 <div class="upload-area" id="uploadArea">
                     <div class="scanning-line"></div>
                     <div class="processing-overlay" id="processingOverlay">
                         <div class="spinner"></div>
-                        <p style="color: var(--primary-color); font-weight: 600;">Analisando padrões visuais...</p>
+                        <p style="color: var(--accent-color); font-weight: 600;">Analisando padrões visuais...</p>
                     </div>
                     <i class="fas fa-cloud-upload-alt upload-icon"></i>
                     <div class="upload-text">
-                        <h3>Arraste uma imagem ou clique para selecionar</h3>
+                        <h3>Arraste uma imagem do seu acervo ou clique para selecionar</h3>
                         <p>Formatos aceitos: JPG, PNG. Tamanho máx: 5MB</p>
                     </div>
                     <input type="file" id="visualSearchInput" hidden accept="image/*">
@@ -419,7 +685,7 @@
                         </button>
                         <img src="" alt="Preview" id="uploadPreview" class="upload-preview">
                         <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-success); font-weight: 600;">
-                            <i class="fas fa-check-circle"></i> Imagem carregada pronta para busca
+                            <i class="fas fa-check-circle"></i> Imagem carregada pronta para busca neural
                         </div>
                     </div>
                 </div>
@@ -451,9 +717,127 @@
         <div class="acc-tooltip">Acessibilidade</div>
     </div>
 
+    
+    <!-- Chatbot Floating Panel -->
+    <div class="chat-trigger" role="button" aria-label="Assistente Inteligente" tabindex="0">
+        <i class="fas fa-robot"></i>
+        <div class="chat-tooltip">Assistente I.A.</div>
+    </div>
+    
+    <div class="chat-panel">
+        <div class="chat-panel-header">
+            <h3><i class="fas fa-robot"></i> Assistente</h3>
+            <button class="chat-panel-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-panel-body">
+            <div class="chat-bubble">
+                Olá! Sou o assistente da curadoria da Pinacoteca inteligente. Como posso guiar sua pesquisa hoje?
+            </div>
+            <div class="chat-bubble" style="background:#eef2f6; border-radius:12px; border-bottom-right-radius:2px; margin-left:20px; text-align:right; color:#2d3748; border-color:#d7e0e9;">
+                Gostaria de ver obras abstratas...
+            </div>
+            <div class="chat-bubble" style="opacity: 0.7; width: max-content; padding: 0.5rem 1rem;">
+                <i class="fas fa-circle" style="font-size:6px; animation: blink 1s infinite alternate;"></i>
+                <i class="fas fa-circle" style="font-size:6px; animation: blink 1s infinite alternate 0.2s;"></i>
+                <i class="fas fa-circle" style="font-size:6px; animation: blink 1s infinite alternate 0.4s;"></i>
+            </div>
+        </div>
+        <div class="chat-panel-input">
+            <input type="text" placeholder="Digite sua mensagem...">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script src="accessibility.js"></script>
     <script src="profile.js"></script>
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <script>
+        // Autocomplete JS para Autoria/Artista
+        document.addEventListener('DOMContentLoaded', () => {
+            const authorInput = document.getElementById('authorSearchInput');
+            const authorAutocomplete = document.getElementById('authorAutocomplete');
+            const selectedAuthorsContainer = document.getElementById('selectedAuthorsContainer');
+            if(!authorInput) return;
+            
+            const authorsList = [
+                "Fayga Ostrower", "Cândido Portinari", "Tarsila do Amaral", 
+                "Di Cavalcanti", "Lygia Clark", "Hélio Oiticica", "Anita Malfatti", 
+                "Lygia Pape", "Athos Bulcão", "Rubem Valentim", "Alfredo Volpi"
+            ];
+
+            function addAuthorChip(name) {
+                const existing = Array.from(selectedAuthorsContainer.children).find(
+                    chip => chip.dataset.author && chip.dataset.author.toLowerCase() === name.toLowerCase()
+                );
+                if (existing) return;
+                
+                const chip = document.createElement('span');
+                chip.className = 'city-chip';
+                chip.dataset.author = name;
+                chip.innerHTML = `${name} <i class="fas fa-times" onclick="this.parentElement.remove()"></i>`;
+                selectedAuthorsContainer.appendChild(chip);
+            }
+
+            authorInput.addEventListener('input', (e) => {
+                const val = e.target.value.toLowerCase();
+                authorAutocomplete.innerHTML = '';
+                if (!val) {
+                    authorAutocomplete.classList.add('hidden');
+                    return;
+                }
+                
+                const matches = authorsList.filter(a => a.toLowerCase().includes(val));
+                if (matches.length > 0) {
+                    authorAutocomplete.classList.remove('hidden');
+                    matches.forEach(match => {
+                        const div = document.createElement('div');
+                        div.className = 'autocomplete-item';
+                        div.textContent = match;
+                        div.addEventListener('click', () => {
+                            addAuthorChip(match);
+                            authorInput.value = '';
+                            authorAutocomplete.classList.add('hidden');
+                        });
+                        authorAutocomplete.appendChild(div);
+                    });
+                } else {
+                    authorAutocomplete.classList.add('hidden');
+                }
+            });
+
+            authorInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    const val = authorInput.value.trim();
+                    if (val) {
+                        // Validate if exact match exists in list, else add loosely
+                        const exactMatch = authorsList.find(a => a.toLowerCase() === val.toLowerCase());
+                        addAuthorChip(exactMatch ? exactMatch : val);
+                        authorInput.value = '';
+                        authorAutocomplete.classList.add('hidden');
+                    }
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.author-input-wrapper')) {
+                    authorAutocomplete.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
